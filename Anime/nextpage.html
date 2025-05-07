@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>∞Anime - Browse Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">∞Anime.</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nextpage.html" class="active">Anime</a></li>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Child</a></li>
+                <li><a href="#">Family</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="heart-btn"><i class="fas fa-heart"></i></button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="anime-browse">
+        <!-- Filter Panel -->
+        <div class="filter-section">
+            <h2>
+                Language
+                <i class="fas fa-times filter-toggle"></i>
+            </h2>
+            <div class="filter-content">
+                <div class="filter-group">
+                    <div class="filter-options">
+                        <label><input type="radio" name="language" checked> All</label>
+                        <label><input type="radio" name="language"> Subtitled</label>
+                        <label><input type="radio" name="language"> Dubbed</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h2>Media</h2>
+                    <div class="filter-options">
+                        <label><input type="radio" name="media" checked> All</label>
+                        <label><input type="radio" name="media"> Series</label>
+                        <label><input type="radio" name="media"> Movies</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="anime-grid-section">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <h1>Most Popular Anime</h1>
+                <div class="top-bar-controls">
+                    <div class="sort-dropdown">
+                        <button class="sort-btn">
+                            <i class="fas fa-bars"></i>
+                            POPULARITY
+                        </button>
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-sliders-h"></i>
+                        FILTER
+                    </button>
+                </div>
+            </div>
+
+            <div class="anime-grid">
+                <!-- Row 1 -->
+                <div class="anime-card">
+                    <img src="solo.webp" alt="Solo Leveling">
+                    <div class="anime-info">
+                        <h3>Solo Leveling</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="possib.jpg" alt="Possibly the Greatest Alchemist">
+                    <div class="anime-info">
+                        <h3>Possibly the Greatest Alchemist</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="Drstone.jpg" alt="Dr. STONE">
+                    <div class="anime-info">
+                        <h3>Dr. STONE</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="myh.jpg" alt="The Apothecary Diaries">
+                    <div class="anime-info">
+                        <h3>The Apothecary Diaries</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="alch.jpg" alt="Appraiser Class">
+                    <div class="anime-info">
+                        <h3>Even Given the Worthless "Appraiser"</h3>
+                        <p>Subtitled</p>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="anime-card">
+                    <img src="dnote.webp" alt="Death Note">
+                    <div class="anime-info">
+                        <h3>Death Note</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="prom.jpg" alt="The Promised Neverland">
+                    <div class="anime-info">
+                        <h3>The Promised Neverland</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="tok.jpg" alt="Tokyo Ghoul">
+                    <div class="anime-info">
+                        <h3>Tokyo Ghoul</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="demon.jpg" alt="Demon Slayer">
+                    <div class="anime-info">
+                        <h3>Demon Slayer</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+                <div class="anime-card">
+                    <img src="juju.jpg" alt="Jujutsu Kaisen">
+                    <div class="anime-info">
+                        <h3>Jujutsu Kaisen</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-bottom-line"></div>
+    <script src="script/main.js"></script>
+    <script>
+        // Filter toggle functionality
+        const filterSection = document.querySelector('.filter-section');
+        const filterToggle = document.querySelector('.filter-toggle');
+        const filterBtn = document.querySelector('.filter-btn');
+
+        function toggleFilter() {
+            filterSection.classList.toggle('active');
+        }
+
+        filterToggle.addEventListener('click', toggleFilter);
+        filterBtn.addEventListener('click', toggleFilter);
+
+        // Hamburger menu functionality
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
